@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.hover-btn {
+  background: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hover-btn:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 20px auto;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); background: orange; }
+  100% { transform: scale(1); background: tomato; }
+}
+
+#box {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  margin: 20px auto;
+  transition: transform 1s, background 1s;
+}
+
+.move {
+  transform: translateY(-100px) rotate(45deg);
+  background: gold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  margin: 15% auto;
+  border-radius: 10px;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
